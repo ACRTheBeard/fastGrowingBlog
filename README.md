@@ -10,11 +10,15 @@ This project was quickly created on a windows box with the lates stable php, lar
 1. '''php artisan ui vue --auth''' For createing authentication, and registration
 2. '''php artisan make:migration'' For creating the category and post schemes
 3. '''php artisan migrate''' For adding all the schemas to the database
+3. '''php artisan model''' For using the category and post data
+
 
 ## Directories where code was modified by me (not a tool)
 1. app/database/migrations (adding column defenitions to schema migrations)
 2. app/routes (changed some default routes to make sense within a blog type application)
 3. app/http/controllers (adding actions to controllers and changing default controllers)
+4. app/resources/sass (adding styleing)
+5. app/resources/views (dealing with the blade files)
 
 
 #Setup

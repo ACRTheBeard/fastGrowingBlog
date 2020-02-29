@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category as Category;
+use App\Post as Post;
 
 
 class EditorController extends Controller
@@ -28,14 +29,15 @@ class EditorController extends Controller
         return view('editor');
     }
 
-    public function category()
+    public function categories()
     {
         $categories = Category::all();
         return view('editCategories', ['categories' => $categories] );
     }
 
-    public function post()
+    public function posts()
     {
-        return view('editPosts');
+        $posts = Post::all();
+        return view('editPosts', ['posts' => $posts]);
     }
 }
