@@ -14,7 +14,13 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="{{ url('/editor/categories') }}">
+                        Edit Categories
+                    </a> <br />
+
+                    <a href="{{ url('/editor/posts') }}">
+                        Edit Posts
+                    </a>
                 </div>
             </div>
         </div>

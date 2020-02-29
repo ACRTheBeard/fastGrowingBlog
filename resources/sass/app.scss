@@ -6,3 +6,56 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+body {
+    background-color: $background;
+    color: $textColor;
+}
+
+// I like darkmode!!!
+.bg-white {
+    background-color: $navBackground !important;
+}
+
+
+// navigation related css
+.nav {
+    background-color: $navBackground !important;
+    color: $textColor;
+}
+
+.navbar-brand {
+    color: $textColor !important;
+}
+
+.nav-item a{
+    color: $textColor !important;
+}
+
+.nav-item show {
+    color: $textColor;
+    background-color: #494949;
+}
+
+.dropdown-item {
+    color: $textColor;
+    background-color: #494949;
+}
+
+// div and tile related css
+div .card-header {
+    background-color: #595959;
+    border-color: #696969;
+    color: $textColor;
+}
+div .card-body {
+    background-color: #393939;
+    border-color: #696969;
+    color: $textColor;
+}
+
+
+
+
+
+

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category as Category;
+
 
 class EditorController extends Controller
 {
@@ -24,5 +26,16 @@ class EditorController extends Controller
     public function index()
     {
         return view('editor');
+    }
+
+    public function category()
+    {
+        $categories = Category::all();
+        return view('editCategories', ['categories' => $categories] );
+    }
+
+    public function post()
+    {
+        return view('editPosts');
     }
 }
