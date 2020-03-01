@@ -23,6 +23,7 @@ This project was quickly created on a windows box with the lates stable php, lar
 4. app/resources/sass (adding styling)
 5. app/resources/views (dealing with the blade files)
 6. app/ (modifying generated models)
+7. app/providers (adding the EDITOR constant to redirect to the editor on login)
 
 # Setup
 1. Clone the fast growing blog
