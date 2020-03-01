@@ -18,7 +18,7 @@ This project was quickly created on a windows box with the lates stable php, lar
 1. app/database/migrations (adding column defenitions to schema migrations)
 2. app/routes (changed some default routes to make sense within a blog type application)
 3. app/http/controllers (adding actions to controllers and changing default controllers)
-4. app/resources/sass (adding styleing)
+4. app/resources/sass (adding styling)
 5. app/resources/views (dealing with the blade files)
 6. app/ (modifying generated models)
 
@@ -34,4 +34,5 @@ This project was quickly created on a windows box with the lates stable php, lar
 2. click on your name and wait for the dropdown menu
 3. click on 'Goto the Editor'
 4. have fun editing 
+5. go view your changes by clicking the logo
 

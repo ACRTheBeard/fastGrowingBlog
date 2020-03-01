@@ -23,6 +23,10 @@ class FrontendController extends Controller
             $currentCategory = Category::all()->first();
         }
 
+        if (empty($currentCategory)) {
+            return view('home');
+        }
+
         $posts = $currentCategory->getAllPosts()->toJson();
         $categories = Category::all()->toJson();
         return view('home', [
