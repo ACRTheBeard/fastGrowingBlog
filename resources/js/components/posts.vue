@@ -4,7 +4,7 @@
         <ul style="list-style-type:none;">
             <li v-for="(post, x) in posts" :key="x" style="margin-bottom:40px;">
                 <div>
-                    <a v-bind:id="post.id" href="/post/" v-on:click="postClicked">
+                    <a v-bind:id="post.id" href="#" v-on:click="postClicked(post.id)">
                         <div class="d-flex flex-row">
                             <p>
                             <img
@@ -30,14 +30,13 @@
             posts: Array
         },
         methods: {
-            postClicked: function (event) {
-                 window.location.href = "/posts/" + event.target.id;
+            postClicked: function (id) {
+                window.location.href = "/posts/" + id;
             },
             decode: function (codedString) {
                 codedString = codedString.replace('"', '')
                 return unescape(codedString)
             }
         }
-
     }
 </script>

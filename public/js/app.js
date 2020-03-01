@@ -2008,8 +2008,8 @@ __webpack_require__.r(__webpack_exports__);
     posts: Array
   },
   methods: {
-    postClicked: function postClicked(event) {
-      window.location.href = "/posts/" + event.target.id;
+    postClicked: function postClicked(id) {
+      window.location.href = "/posts/" + id;
     },
     decode: function decode(codedString) {
       codedString = codedString.replace('"', '');
@@ -37497,8 +37497,12 @@ var render = function() {
             _c(
               "a",
               {
-                attrs: { id: post.id, href: "/post/" },
-                on: { click: _vm.postClicked }
+                attrs: { id: post.id, href: "#" },
+                on: {
+                  click: function($event) {
+                    return _vm.postClicked(post.id)
+                  }
+                }
               },
               [
                 _c("div", { staticClass: "d-flex flex-row" }, [
