@@ -9,10 +9,10 @@ This project was quickly created on a windows box with the lates stable php, lar
 
 ## Commands used for developement
 1. 'php artisan ui vue --auth' For createing authentication, and registration
-2. 'php artisan make:migration'' For creating the category and post schemes
+2. 'php artisan make:migration' For creating the category and post schemes
 3. 'php artisan migrate' For adding all the schemas to the database
 3. 'php artisan make:model' For using the category and post data
-4. 'php artisan make:controller' For creating controllers to handle the front end and a few for the backend
+4. 'php artisan make:controller' For creating controllers to handle the frontend, and a few for the backend
 5. 'php artisan key:generate' For creating an app level security key
 
 
