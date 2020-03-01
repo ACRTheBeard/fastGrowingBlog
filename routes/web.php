@@ -1,8 +1,7 @@
 <?php
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'FrontendController@index')->name('home');
+Route::get('/categories/{id}', 'FrontendController@index')->name('home');
 
 Auth::routes();
 

@@ -15,6 +15,8 @@ class CategoryController extends Controller
 
         if ($parentId == 'root' && empty($category->parent_category_id)) {
             $category->parent_category_id = 'root';
+        } elseif ($parentId != 'root' && $id == 'new') {
+            $category->parent_category_id = $parentId;
         }
 
         if ($reqMethod == 'POST') {
