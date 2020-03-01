@@ -7,6 +7,21 @@ use App\Category as Category;
 
 class CategoryController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * creates or updates a category
+     *
+     * @return void
+     */
     public function createOrUpdate(Request $request) {
         $reqMethod = $request->method();
         $id = $request->id;
@@ -34,6 +49,19 @@ class CategoryController extends Controller
         // get the children
         $children = Category::where('parent_category_id', $id)->get();
         return view('category', $category, ['children' => $children]);
+    }
+
+    /**
+     * deletes a category
+     *
+     * @return void
+     */
+    public function destroy(Request $request) {
+        $id = $request->id;
+        $category = Category::find($id);
+        $category->delete();
+
+        return redirect()->route('editCategories');
     }
 
 

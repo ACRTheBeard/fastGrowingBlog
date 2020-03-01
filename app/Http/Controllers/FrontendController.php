@@ -8,6 +8,11 @@ use App\Post as Post;
 
 class FrontendController extends Controller
 {
+    /**
+     * shows the blog public front page
+     *
+     * @return void
+     */
     public function index(Request $request) {
         $id = $request->id;
         $currentCategory = null;
@@ -25,5 +30,23 @@ class FrontendController extends Controller
             'currentCategory' => $currentCategory,
             'posts' => $posts
             ]);
+    }
+
+    /**
+     * shows the details of a post
+     *
+     * @return void
+     */
+    public function postDetails(Request $request) {
+        $id = $request->id;
+
+        if (!$id)
+        {
+            return $redirect->withErrors(['status' => 404]);
+        }
+
+        $post = Post::where('id', $id)->get()->first()->toJson();
+
+        return view('details', ['post' => $post]);
     }
 }

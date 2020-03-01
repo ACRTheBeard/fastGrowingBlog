@@ -14,6 +14,7 @@ window.Vue = require('vue');
 Vue.component('blog', require('./components/blog.vue').default);
 Vue.component('categories', require('./components/categories.vue').default);
 Vue.component('posts', require('./components/posts.vue').default);
+Vue.component('post-details', require('./components/post-details.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

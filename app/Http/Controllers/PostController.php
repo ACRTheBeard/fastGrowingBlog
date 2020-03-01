@@ -9,6 +9,21 @@ use App\Category;
 
 class PostController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * creates or updates a post
+     *
+     * @return void
+     */
     public function createOrUpdate(Request $request) {
         $reqMethod = $request->method();
         $id = $request->id;

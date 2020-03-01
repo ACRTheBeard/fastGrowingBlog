@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <h5>Categories</h5>
-        <ul>
+    <div class="d-flex flex-column">
+        <h5 style="margin-left: -20px;">Categories</h5>
+        <ul style="padding: 0px;">
             <li v-for="(category, x) in categories" :key="x">
-                <a v-bind:id="category.id" href="#" v-on:click="categoryClicked">{{category.name}}</a>
+                <a v-bind:id="category.id" href="#" v-on:click="categoryClicked(category.id)">{{category.name}}</a>
             </li>
         </ul>
     </div>
@@ -18,8 +18,8 @@
             console.log('Component mounted.', this.props)
         },
         methods: {
-            categoryClicked: function (event) {
-                window.location.href = "/categories/" + event.target.id;
+            categoryClicked: function (id) {
+                window.location.href = "/categories/" + id;
             }
         }
     }

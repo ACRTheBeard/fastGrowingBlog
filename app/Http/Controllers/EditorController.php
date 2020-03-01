@@ -20,7 +20,7 @@ class EditorController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the application editor dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
@@ -29,12 +29,22 @@ class EditorController extends Controller
         return view('editor');
     }
 
+    /**
+     * shows the a category dashboard
+     *
+     * @return void
+     */
     public function categories()
     {
         $categories = Category::all();
         return view('editCategories', ['categories' => $categories] );
     }
 
+    /**
+     * shows the a post dashboard
+     *
+     * @return void
+     */
     public function posts()
     {
         $posts = Post::all();

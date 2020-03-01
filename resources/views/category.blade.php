@@ -6,7 +6,17 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">@if($id == 'new')Add a new Category @else Edit Category @endif</div>
+                <div class="card-header" style="width:100%">
+                    @if($id == 'new')
+                        Add a new Category
+                    @else
+                    <div class="d-flex justify-content-between" style="width:100%" >
+                        <div>Edit Category</div>
+
+                        <div><a href="/editor/remove/categories/{{ $id }}">Delete</a></div>
+                    </div>
+                    @endif
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
