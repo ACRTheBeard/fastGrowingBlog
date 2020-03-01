@@ -5,7 +5,7 @@ Author: Alex Rosekrans
 Copyright: interview-use-only
 
 # Development
-This project was quickly created on a windows box with the lates stable php, laravel, and mariaDB versions.  It uses composer as a dependency manager, and it has a some quirky db settings do to windows.  You may have to configure your database differently.
+This project was quickly created on a windows box with the lates stable PHP, Laravel, and MariaDB versions.  It uses Composer as a dependency manager, and it has a some quirky db settings do to windows.  You may have to configure your database differently.
 
 ## Commands used for developement
 1. 'php artisan ui vue --auth' For createing authentication, and registration
