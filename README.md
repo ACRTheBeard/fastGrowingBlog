@@ -31,7 +31,9 @@ This project was quickly created on a windows box with the lates stable PHP, Lar
 3. Run "composer install"
 4. Run "npm install"
 5. Run "php artisan key:generate"
-6. Have fun pointing and laughing (:D)
+6. Run "npm run dev"
+7. Run "php artisan serve"
+8. Have fun pointing and laughing (:D)
 
 # Using the Editor
 1. Register and login
